@@ -1,4 +1,4 @@
-const component = () => {
+const component = (age, job) => {
   let obj = {
     name: "유으뜸",
     age: 12,
@@ -22,7 +22,7 @@ const component = () => {
       return "No";
     }
   };
-  
+
   return `
   <h1>${obj.name}</h1>
   <h2>${innerFunc()}</h2>
