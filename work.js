@@ -4,6 +4,14 @@
 //   job: "",
 // };
 
+// const component = () => {
+//   let obj = basicData();
+
+//   const decision = () => {};
+
+//   return `<html></html>`;
+// }
+
 // * 생성자 함수 setter로 규격 만들기
 // * 생성자 함수로 객체 생성하기
 // * 생성자 함수 출저를 검사하기 -> instanceof
