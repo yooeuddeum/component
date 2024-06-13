@@ -8,17 +8,15 @@ const component = (age, job) => {
   let innerFunc = () => {
     if (obj.age > 20) {
       return "여름엔 역시 사이다가 최고";
-    } 
-    else {
+    } else {
       return "여름엔 역시 요구르트가 최고";
     }
   };
 
   let Afunc = () => {
-    if(obj.job === "수강생"){
+    if (obj.job === "수강생") {
       return "Good";
-    }
-    else {
+    } else {
       return "No";
     }
   };
@@ -29,3 +27,5 @@ const component = (age, job) => {
   <h3>${Afunc()}</h3>
   `;
 };
+
+console.log(component());
