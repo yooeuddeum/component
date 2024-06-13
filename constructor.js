@@ -134,8 +134,7 @@ function userInfo1() {
   this.email = "www.google.com";
   this.info = () => {
     return `
-    name :${this.name} age : ${this.age} address :${this.address} email : ${this.email} 
-     `;
+    name :${this.name} age : ${this.age} address :${this.address} email : ${this.email} `;
   };
 }
 
