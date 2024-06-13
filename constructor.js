@@ -151,3 +151,4 @@ console.log(userInfo2.email);
 console.log(userInfo3.name);
 console.log(userInfo4.age);
 console.log(userInfo5.info());
+console.log(userInfo2);
