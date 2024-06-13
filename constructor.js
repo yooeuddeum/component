@@ -28,7 +28,7 @@
 
 // test1.introduce();
 
-//* -------------------------------------------------------
+// // * -------------------------------------------------------
 
 // function tese(test1, test2, test3) {
 //   this.test1 = test1;
@@ -83,5 +83,26 @@ console.log(userInfo.name);
 // console.log(userInfo.age);
 // console.log(userInfo.address);
 
-const test = new userInfo("ki", 31, "대전");
-console.log(test);
+const test5 = new userInfo("ki", 31, "대전");
+console.log(test5);
+
+//* -------------------------------------------------------
+// 각 객체가 독립적으로 실행되지 않고 동일한 객체로 실행됨
+let userInfo1 = {
+  name: "유으뜸",
+  age: 1414,
+  address: "대전",
+  email: "www.google.com",
+};
+
+let userInfo2 = userInfo1;
+let userInfo3 = userInfo1;
+let userInfo4 = userInfo1;
+
+userInfo3.name = "또치";
+
+console.log(userInfo2.name);
+console.log(userInfo3.name);
+console.log(userInfo4.name);
+
+//* -------------------------------------------------------
