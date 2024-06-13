@@ -106,7 +106,7 @@ console.log(test5);
 // console.log(userInfo4.name);
 
 //* -------------------------------------------------------
-
+// 다른 방식으로 동일한 객체로 잡히지 않고 독립적인 역할을 하게 끔 수정
 function userInfo1() {
   this.name = "유으뜸";
   this.age = 1414;
