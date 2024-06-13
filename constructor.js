@@ -88,21 +88,40 @@ console.log(test5);
 
 //* -------------------------------------------------------
 // 각 객체가 독립적으로 실행되지 않고 동일한 객체로 실행됨
-let userInfo1 = {
-  name: "유으뜸",
-  age: 1414,
-  address: "대전",
-  email: "www.google.com",
-};
+// let userInfo1 = {
+//   name: "유으뜸",
+//   age: 1414,
+//   address: "대전",
+//   email: "www.google.com",
+// };
 
-let userInfo2 = userInfo1;
-let userInfo3 = userInfo1;
-let userInfo4 = userInfo1;
+// let userInfo2 = userInfo1;
+// let userInfo3 = userInfo1;
+// let userInfo4 = userInfo1;
 
-userInfo3.name = "또치";
+// userInfo3.name = "또치";
 
-console.log(userInfo2.name);
-console.log(userInfo3.name);
-console.log(userInfo4.name);
+// console.log(userInfo2.name);
+// console.log(userInfo3.name);
+// console.log(userInfo4.name);
 
 //* -------------------------------------------------------
+
+function userInfo1() {
+  this.name = "유으뜸";
+  this.age = 1414;
+  this.address = "대전";
+  this.email = "www.google.com";
+}
+
+let userInfo2 = new userInfo1();
+let userInfo3 = new userInfo1();
+let userInfo4 = new userInfo1();
+
+userInfo2.email = "www.naver.com";
+userInfo3.name = "또치";
+userInfo4.age = 7;
+
+console.log(userInfo2.email);
+console.log(userInfo3.name);
+console.log(userInfo4.age);
