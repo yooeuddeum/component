@@ -107,11 +107,36 @@ console.log(test5);
 
 //* -------------------------------------------------------
 // 다른 방식으로 동일한 객체로 잡히지 않고 독립적인 역할을 하게 끔 수정
+// function userInfo1() {
+//   this.name = "유으뜸";
+//   this.age = 1414;
+//   this.address = "대전";
+//   this.email = "www.google.com";
+// }
+
+// let userInfo2 = new userInfo1();
+// let userInfo3 = new userInfo1();
+// let userInfo4 = new userInfo1();
+
+// userInfo2.email = "www.naver.com";
+// userInfo3.name = "또치";
+// userInfo4.age = 7;
+
+// console.log(userInfo2.email);
+// console.log(userInfo3.name);
+// console.log(userInfo4.age);
+
+//* -------------------------------------------------------
 function userInfo1() {
   this.name = "유으뜸";
   this.age = 1414;
   this.address = "대전";
   this.email = "www.google.com";
+  this.info = () => {
+    return `
+    my name :${this.name} age : ${this.age} address :${this.address} email : ${this.email} 
+     `;
+  };
 }
 
 let userInfo2 = new userInfo1();
@@ -125,3 +150,4 @@ userInfo4.age = 7;
 console.log(userInfo2.email);
 console.log(userInfo3.name);
 console.log(userInfo4.age);
+console.log(userInfo2.info());
