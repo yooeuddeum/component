@@ -72,4 +72,16 @@
 
 //* -------------------------------------------------------
 
+//* this는 생성자 함수를 호출하는 객체를 의미
+//* userInfo
+function userInfo(name, age, address) {
+  this.name = name;
+  this.age = age;
+  this.address = address;
+}
+console.log(userInfo.name);
+// console.log(userInfo.age);
+// console.log(userInfo.address);
 
+const test = new userInfo("ki", 31, "대전");
+console.log(test);
