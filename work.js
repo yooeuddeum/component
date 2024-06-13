@@ -58,19 +58,14 @@ class BasicData {
 }
 
 const component = () => {
-  let obj = new BasicData("euddeum", 141, "student");
+  let obj = new BasicData("euddeum", 1411422, "student");
 
   const decision = () => {
     if (obj instanceof BasicData) {
       return `
-      <html>
-      <body>
       <h1>이름: ${obj.name}</h1>
       <h2>나이: ${obj.age}</h2>
       <h3>직업: ${obj.job}</h3>
-      </body>
-      </html>
-      
       `;
     } else {
       console.error("규격 미달");
@@ -81,3 +76,5 @@ const component = () => {
 };
 
 console.log(component());
+
+      
