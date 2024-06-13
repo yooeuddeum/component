@@ -134,7 +134,7 @@ function userInfo1() {
   this.email = "www.google.com";
   this.info = () => {
     return `
-    my name :${this.name} age : ${this.age} address :${this.address} email : ${this.email} 
+    name :${this.name} age : ${this.age} address :${this.address} email : ${this.email} 
      `;
   };
 }
@@ -142,6 +142,7 @@ function userInfo1() {
 let userInfo2 = new userInfo1();
 let userInfo3 = new userInfo1();
 let userInfo4 = new userInfo1();
+let userInfo5 = new userInfo1();
 
 userInfo2.email = "www.naver.com";
 userInfo3.name = "또치";
@@ -150,4 +151,4 @@ userInfo4.age = 7;
 console.log(userInfo2.email);
 console.log(userInfo3.name);
 console.log(userInfo4.age);
-console.log(userInfo2.info());
+console.log(userInfo5.info());
