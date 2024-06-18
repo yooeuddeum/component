@@ -72,19 +72,19 @@
 
 //* -------------------------------------------------------
 
-//* this는 생성자 함수를 호출하는 객체를 의미
-//* userInfo
-function userInfo(name, age, address) {
-  this.name = name;
-  this.age = age;
-  this.address = address;
-}
-console.log(userInfo.name);
-// console.log(userInfo.age);
-// console.log(userInfo.address);
+// //* this는 생성자 함수를 호출하는 객체를 의미
+// //* userInfo
+// function userInfo(name, age, address) {
+//   this.name = name;
+//   this.age = age;
+//   this.address = address;
+// }
+// console.log(userInfo.name);
+// // console.log(userInfo.age);
+// // console.log(userInfo.address);
 
-const test5 = new userInfo("ki", 31, "대전");
-console.log(test5);
+// const test5 = new userInfo("ki", 31, "대전");
+// console.log(test5);
 
 //* -------------------------------------------------------
 // 각 객체가 독립적으로 실행되지 않고 동일한 객체로 실행됨
@@ -107,41 +107,16 @@ console.log(test5);
 
 //* -------------------------------------------------------
 // 다른 방식으로 동일한 객체로 잡히지 않고 독립적인 역할을 하게 끔 수정
-// function userInfo1() {
-//   this.name = "유으뜸";
-//   this.age = 1414;
-//   this.address = "대전";
-//   this.email = "www.google.com";
-// }
-
-// let userInfo2 = new userInfo1();
-// let userInfo3 = new userInfo1();
-// let userInfo4 = new userInfo1();
-
-// userInfo2.email = "www.naver.com";
-// userInfo3.name = "또치";
-// userInfo4.age = 7;
-
-// console.log(userInfo2.email);
-// console.log(userInfo3.name);
-// console.log(userInfo4.age);
-
-//* -------------------------------------------------------
 function userInfo1() {
   this.name = "유으뜸";
   this.age = 1414;
   this.address = "대전";
   this.email = "www.google.com";
-  this.info = () => {
-    return `
-    name :${this.name} age : ${this.age} address :${this.address} email : ${this.email} `;
-  };
 }
 
 let userInfo2 = new userInfo1();
 let userInfo3 = new userInfo1();
 let userInfo4 = new userInfo1();
-let userInfo5 = new userInfo1();
 
 userInfo2.email = "www.naver.com";
 userInfo3.name = "또치";
@@ -150,5 +125,30 @@ userInfo4.age = 7;
 console.log(userInfo2.email);
 console.log(userInfo3.name);
 console.log(userInfo4.age);
-console.log(userInfo5.info());
-console.log(userInfo2);
+
+//* -------------------------------------------------------
+// function userInfo1() {
+//   this.name = "유으뜸";
+//   this.age = 1414;
+//   this.address = "대전";
+//   this.email = "www.google.com";
+//   this.info = () => {
+//     return `
+//     name :${this.name} age : ${this.age} address :${this.address} email : ${this.email} `;
+//   };
+// }
+
+// let userInfo2 = new userInfo1();
+// let userInfo3 = new userInfo1();
+// let userInfo4 = new userInfo1();
+// let userInfo5 = new userInfo1();
+
+// userInfo2.email = "www.naver.com";
+// userInfo3.name = "또치";
+// userInfo4.age = 7;
+
+// console.log(userInfo2.email);
+// console.log(userInfo3.name);
+// console.log(userInfo4.age);
+// console.log(userInfo5.info());
+// console.log(userInfo2);
